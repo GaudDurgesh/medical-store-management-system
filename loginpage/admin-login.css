@@ -1,0 +1,140 @@
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #004e92, #000428);
+}
+
+.login-container {
+  width: 400px;
+  background: #ffffff10;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00e0ff;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #e0f7fa;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #ffffff20;
+  color: #fff;
+  font-size: 15px;
+}
+
+.input-group input::placeholder {
+  color: #b2ebf2;
+}
+
+.input-group .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  cursor: pointer;
+  color: #00e0ff;
+  font-size: 16px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #008c9e;
+  transform: scale(1.02);
+}
+
+.error-msg {
+  color: #ff5252;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: none;
+}
+
+.success-msg {
+  color: #00e676;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  color: #b2ebf2;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.success-msg,
+.error-msg {
+  animation: fadeInMsg 0.5s ease-in-out;
+}
+
+@keyframes fadeInMsg {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
